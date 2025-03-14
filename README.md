@@ -1,12 +1,21 @@
-# React + Vite
+# PowerUp EV Charging UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PowerUp EV Charging UI is a React-based user interface designed to showcase PowerUp's fast and mobile EV charging solutions. This project features a sleek and responsive layout with components for different charging products.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **PowerUp 60**: A fast-charging station with a modern design.
+- **PowerUp Mobile**: A portable EV charging solution for emergency and on-the-go charging needs.
+- **Responsive UI**: Fully optimized for desktop and mobile viewing.
+- **Dynamic Components**: Components are built using reusable and scalable React patterns.
 
-## Expanding the ESLint configuration
+## Installation
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+To run the project locally, follow these steps:
+
+```bash
+git clone https://github.com/your-repo/powerup-ev-ui.git
+cd powerup-ev-ui
+npm install
+npm start
+```
