@@ -29,69 +29,69 @@ export const GetAQuote = () => {
 
   return (
     <div className="flex justify-center items-center min-h-screen bg-gradient-to-b from-white to-green-200 p-6">
-      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-3xl">
-        <h2 className="text-green-600 text-2xl font-bold text-center mb-6">
+      <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-3xl">
+        <h2 className="text-green-600 text-3xl font-bold text-center mb-6">
           Get a Quote
         </h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
               type="text"
               name="businessName"
               placeholder="Business Name"
-              className="input"
+              className="input-field"
               onChange={handleChange}
             />
             <input
               type="text"
               name="numberOfStations"
               placeholder="Number of Charging Stations Required"
-              className="input"
+              className="input-field"
               onChange={handleChange}
             />
             <input
               type="text"
               name="name"
-              placeholder="Name"
-              className="input"
+              placeholder="Your Name"
+              className="input-field"
               onChange={handleChange}
             />
             <input
               type="text"
               name="estimatedChargers"
-              placeholder="Estimated Number of Chargers Required"
-              className="input"
+              placeholder="Estimated Number of Chargers"
+              className="input-field"
               onChange={handleChange}
             />
             <input
               type="email"
               name="email"
-              placeholder="Email"
-              className="input"
+              placeholder="Email Address"
+              className="input-field"
               onChange={handleChange}
             />
             <input
               type="text"
               name="phone"
-              placeholder="Phone"
-              className="input"
+              placeholder="Phone Number"
+              className="input-field"
               onChange={handleChange}
             />
             <input
               type="text"
               name="industry"
-              placeholder="Industry"
-              className="input"
+              placeholder="Industry Type"
+              className="input-field"
               onChange={handleChange}
             />
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <label className="text-gray-700 font-semibold">
               Type of Chargers Interested In
             </label>
-            <div className="flex gap-4">
-              <label>
+            <div className="flex gap-4 flex-wrap">
+              <label className="flex items-center gap-2">
                 <input
                   type="checkbox"
                   name="chargerType"
@@ -100,7 +100,7 @@ export const GetAQuote = () => {
                 />{" "}
                 Level 2
               </label>
-              <label>
+              <label className="flex items-center gap-2">
                 <input
                   type="checkbox"
                   name="chargerType"
@@ -109,7 +109,7 @@ export const GetAQuote = () => {
                 />{" "}
                 DC Fast
               </label>
-              <label>
+              <label className="flex items-center gap-2">
                 <input
                   type="checkbox"
                   name="chargerType"
@@ -121,12 +121,12 @@ export const GetAQuote = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-3">
             <label className="text-gray-700 font-semibold">
               Do you have any Existing EV Infrastructure?
             </label>
             <div className="flex gap-4">
-              <label>
+              <label className="flex items-center gap-2">
                 <input
                   type="radio"
                   name="existingInfrastructure"
@@ -135,7 +135,7 @@ export const GetAQuote = () => {
                 />{" "}
                 Yes
               </label>
-              <label>
+              <label className="flex items-center gap-2">
                 <input
                   type="radio"
                   name="existingInfrastructure"
@@ -149,8 +149,8 @@ export const GetAQuote = () => {
 
           <textarea
             name="message"
-            placeholder="Message (Max 500 characters)"
-            className="input h-24"
+            placeholder="Your Message (Max 500 characters)"
+            className="input-field h-28"
             onChange={handleChange}
           ></textarea>
 
@@ -159,7 +159,7 @@ export const GetAQuote = () => {
               type="checkbox"
               name="terms"
               id="terms"
-              className="w-4 h-4"
+              className="w-5 h-5"
             />
             <label htmlFor="terms" className="text-gray-600 text-sm">
               By submitting, you agree to our{" "}
@@ -172,7 +172,7 @@ export const GetAQuote = () => {
 
           <button
             type="submit"
-            className="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700"
+            className="w-full bg-green-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-green-700 transition-all shadow-md"
           >
             Submit
           </button>

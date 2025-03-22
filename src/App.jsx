@@ -8,6 +8,8 @@ import { EnergyMaestro } from "./pages/energy-maestro";
 import { Navbar } from "./components/navbar";
 import { Footer } from "./components/footer";
 import { GetAQuote } from "./pages/get-quote";
+import { ContactUs } from "./pages/contact-us";
+import { Company } from "./pages/company";
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/powerup-mobile" element={<PowerUpMobile />} />
           <Route path="/energymaestro" element={<EnergyMaestro />} />
           <Route path="/get-quote" element={<GetAQuote />} />
+          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/company" element={<Company />} />
         </Routes>
       </div>
       <br />

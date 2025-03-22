@@ -8,15 +8,15 @@ export const Home = () => {
         className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-white"
         style={{ backgroundImage: "url('/hero1.jpg')" }}
       >
-        <h1 className="text-5xl font-bold text-green-600 drop-shadow-lg">
+        <h1 className="text-5xl md:text-6xl font-bold text-green-600 drop-shadow-lg animate-fadeIn">
           The Schön Way
         </h1>
-        <p className="mt-4 max-w-2xl text-lg font-medium drop-shadow-lg">
+        <p className="mt-4 max-w-2xl text-lg md:text-xl font-medium drop-shadow-lg animate-fadeIn delay-200">
           Making Range Anxiety Charging Inconvenience a thing of the past by
           Making EV Chargers Cost-Effective and Smart
         </p>
         <Link to="/get-quote">
-          <button className="mt-6 bg-green-500 hover:bg-green-600 transition-all text-white px-6 py-3 rounded-full text-lg font-semibold shadow-xl">
+          <button className="mt-6 bg-green-500 hover:bg-green-600 transition-all text-white px-8 py-3 rounded-full text-lg md:text-xl font-semibold shadow-xl hover:shadow-2xl animate-bounce">
             Get a Quote
           </button>
         </Link>
@@ -24,8 +24,10 @@ export const Home = () => {
 
       {/* Products Section */}
       <div className="py-20 bg-white">
-        <h2 className="text-4xl font-bold text-gray-800">Our Products</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mt-8">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+          Our Products
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-8">
           {[
             { src: "/powerup-3.png", label: "PowerUp 32" },
             { src: "/powerup-one.png", label: "PowerUp 22" },
@@ -34,7 +36,7 @@ export const Home = () => {
           ].map((product, index) => (
             <div
               key={index}
-              className="text-center p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow"
+              className="text-center p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
             >
               <img
                 src={product.src}
@@ -51,10 +53,12 @@ export const Home = () => {
 
       {/* Energy Maestro Section */}
       <div className="py-20 bg-gray-100 shadow-md rounded-lg mx-6 lg:mx-16">
-        <h2 className="text-4xl font-bold text-gray-800">EnergyMÆSTRO</h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+          EnergyMÆSTRO
+        </h2>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 mt-8">
           <div className="lg:w-1/2 text-center lg:text-left">
-            <h3 className="text-2xl font-semibold text-green-600">
+            <h3 className="text-2xl md:text-3xl font-semibold text-green-600">
               Our Charge Network Management Software
             </h3>
             <p className="mt-4 text-gray-600 text-lg leading-relaxed">
@@ -68,14 +72,14 @@ export const Home = () => {
           <img
             src="/energy-maestro.png"
             alt="Energy Maestro"
-            className="w-full max-w-md rounded-lg shadow-xl"
+            className="w-full max-w-md rounded-lg shadow-xl hover:shadow-2xl transition-all"
           />
         </div>
       </div>
 
       {/* Industries We Service */}
       <div className="py-20 bg-white">
-        <h2 className="text-4xl font-bold text-gray-800">
+        <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
           Industries We Service
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10">
@@ -87,7 +91,7 @@ export const Home = () => {
           ].map((industry, index) => (
             <div
               key={index}
-              className="text-center p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              className="text-center p-4 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-2"
             >
               <img
                 src={industry.src}

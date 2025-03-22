@@ -1,6 +1,8 @@
+import React from "react";
+
 export const PowerUpMobile = () => {
   return (
-    <div className="pt-8 px-6 py-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
+    <div className="pt-24 px-6 py-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-8">
       {/* Left Side - Images */}
       <div className="flex flex-col items-center gap-4">
         <img src="/van-closed.png" alt="PowerUp Mobile Van" className="w-72" />
