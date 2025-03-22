@@ -2,11 +2,12 @@ import React from "react";
 
 export const PowerUp60 = () => {
   return (
-    <div className="pt-24 px-6 text-center space-y-6 bg-gradient-to-b from-white to-green-100 min-h-screen">
+    <div className="pt-24 px-6 text-center space-y-10 bg-gradient-to-b from-green-50 to-green-200 min-h-screen">
       {/* Title and Subtitle */}
-      <h1 className="text-4xl font-extrabold text-green-700">
+      <h1 className="text-4xl font-extrabold text-green-700 drop-shadow-md">
         Discover PowerUp 60
       </h1>
+
       {/* Layout for Image and Description */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-12">
         {/* Charger Image */}
@@ -14,12 +15,12 @@ export const PowerUp60 = () => {
           <img
             src="/charger.png"
             alt="PowerUp 60 Charger"
-            className="w-[300px] h-[380px] md:w-[400px] shadow-lg rounded-lg"
+            className="w-[320px] h-[400px] md:w-[420px] shadow-xl rounded-lg transition-transform transform hover:scale-105"
           />
         </div>
 
         {/* Description and Best Suited For Section */}
-        <div className="md:w-1/2 text-left space-y-4">
+        <div className="md:w-1/2 text-left space-y-5">
           <p className="text-gray-800 text-lg leading-relaxed">
             Experience the future of fast charging with our sleek, visually
             stunning DC charger. Power up your journey in just 60 minutes.
@@ -35,7 +36,7 @@ export const PowerUp60 = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="p-4 border rounded-lg text-center shadow-md w-32 bg-white hover:shadow-xl transition"
+                className="p-4 border rounded-xl text-center shadow-md w-32 bg-white hover:shadow-2xl transition-transform transform hover:-translate-y-1"
               >
                 <img src={item.img} alt={item.label} className="h-12 mx-auto" />
                 <p className="mt-2 font-semibold text-green-700">
@@ -47,7 +48,7 @@ export const PowerUp60 = () => {
         </div>
       </div>
 
-      {/* Specifications Sections */}
+      {/* Specifications Section */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {[
           {
@@ -99,7 +100,10 @@ export const PowerUp60 = () => {
             ],
           },
         ].map((spec, index) => (
-          <div key={index} className="p-6 border rounded-lg shadow-lg bg-white">
+          <div
+            key={index}
+            className="p-6 border rounded-xl shadow-lg bg-white hover:shadow-2xl transition-transform transform hover:-translate-y-1"
+          >
             <img
               src={spec.icon}
               alt={spec.title}

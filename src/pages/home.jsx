@@ -23,11 +23,13 @@ export const Home = () => {
       </div>
 
       {/* Products Section */}
-      <div className="py-20 bg-white">
+      <div className="py-20 bg-gradient-to-b from-green-100 to-green-300">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
           Our Products
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mt-8">
+
+        {/* Slider on Mobile */}
+        <div className="mt-8 overflow-x-scroll md:overflow-hidden whitespace-nowrap scrollbar-hide flex md:grid md:grid-cols-4 gap-6 md:gap-10 px-4">
           {[
             { src: "/powerup-3.png", label: "PowerUp 32" },
             { src: "/powerup-one.png", label: "PowerUp 22" },
@@ -36,7 +38,7 @@ export const Home = () => {
           ].map((product, index) => (
             <div
               key={index}
-              className="text-center p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
+              className="text-center p-6 rounded-lg shadow-lg bg-white hover:shadow-2xl transition-all transform hover:-translate-y-2 w-64 md:w-auto inline-block md:block"
             >
               <img
                 src={product.src}
@@ -52,16 +54,16 @@ export const Home = () => {
       </div>
 
       {/* Energy Maestro Section */}
-      <div className="py-20 bg-gray-100 shadow-md rounded-lg mx-6 lg:mx-16">
+      <div className="py-20 bg-gradient-to-b from-green-300 to-green-500 shadow-md rounded-lg mx-6 lg:mx-16">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
           EnergyMÆSTRO
         </h2>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 mt-8">
           <div className="lg:w-1/2 text-center lg:text-left">
-            <h3 className="text-2xl md:text-3xl font-semibold text-green-600">
+            <h3 className="text-2xl md:text-3xl font-semibold text-white">
               Our Charge Network Management Software
             </h3>
-            <p className="mt-4 text-gray-600 text-lg leading-relaxed">
+            <p className="mt-4 text-gray-100 text-lg leading-relaxed">
               EnergyMaestro, Schön’s innovative charge network management
               system, is the nexus of advanced EV infrastructure management and
               energy optimization. This platform, tailored for the evolving
@@ -78,20 +80,25 @@ export const Home = () => {
       </div>
 
       {/* Industries We Service */}
-      <div className="py-20 bg-white">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+      <div className="py-20 bg-gradient-to-b from-green-500 to-green-700">
+        <h2 className="text-4xl md:text-5xl font-bold text-white">
           Industries We Service
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-10">
+
+        {/* Slider for Mobile */}
+        <div className="mt-10 overflow-x-scroll md:overflow-hidden whitespace-nowrap scrollbar-hide flex md:grid md:grid-cols-4 gap-6 md:gap-10 px-4">
           {[
             { src: "/auto-dealership.png", label: "Auto Dealerships" },
             { src: "/auto-marker.png", label: "AutoMakers" },
             { src: "/hospital.png", label: "Hospitality" },
             { src: "/retail.png", label: "Real Estate" },
+            { src: "/parking.png", label: "Parking" },
+            { src: "/muncipalities.png", label: "Municipality" },
+            { src: "/work-place.png", label: "Work Place" },
           ].map((industry, index) => (
             <div
               key={index}
-              className="text-center p-4 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-2"
+              className="text-center p-4 rounded-lg bg-white shadow-md hover:shadow-lg transition-all transform hover:-translate-y-2 w-48 md:w-auto inline-block md:block"
             >
               <img
                 src={industry.src}

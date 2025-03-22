@@ -22,7 +22,7 @@ export const EnergyMaestro = () => {
           <img
             src="/intro.png"
             alt="EnergyMaestro"
-            className="w-full max-w-md rounded-lg shadow-xl"
+            className="w-full max-w-md rounded-lg shadow-2xl transition-transform transform hover:scale-105"
           />
         </div>
       </div>
@@ -33,19 +33,19 @@ export const EnergyMaestro = () => {
           key={index}
           className={`mt-12 flex flex-col md:flex-row ${
             section.reverse ? "md:flex-row-reverse" : ""
-          } items-center bg-green-500 py-10 px-6 text-white rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl`}
+          } items-center bg-gradient-to-r from-green-500 to-green-700 py-10 px-6 text-white rounded-xl shadow-xl transition-all duration-300 hover:shadow-2xl`}
         >
           {/* Image */}
           <div className="md:w-1/2 flex justify-center">
             <img
               src={section.image}
               alt={section.title}
-              className="w-full max-w-md rounded-lg shadow-md"
+              className="w-full max-w-md rounded-lg shadow-xl transition-transform transform hover:scale-105"
             />
           </div>
 
           {/* Text Content */}
-          <div className="md:w-1/2 text-left p-6 bg-white text-gray-800 rounded-lg shadow-lg">
+          <div className="md:w-1/2 text-left p-6 bg-white text-gray-800 rounded-lg shadow-lg transition-transform transform hover:scale-105">
             <h3 className="text-green-600 font-bold text-xl md:text-2xl">
               {section.heading}
             </h3>

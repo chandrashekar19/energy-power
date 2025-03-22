@@ -25,30 +25,33 @@ export const Company = () => {
   const [activeSection, setActiveSection] = useState(0);
 
   return (
-    <div className="bg-gray-100 min-h-screen px-6 md:px-20 py-10 pt-24">
-      <h1 className="text-center text-green-600 text-4xl font-bold mb-10">
+    <div className="bg-gradient-to-b from-green-50 to-green-100 min-h-screen px-6 md:px-20 py-12 pt-24">
+      <h1 className="text-center text-green-700 text-4xl font-bold mb-12">
         Company
       </h1>
+
       {/* Tabs */}
-      <div className="flex justify-center gap-10 border-b pb-4 text-lg font-semibold">
+      <div className="flex justify-center gap-8 border-b pb-4 text-lg font-semibold">
         {sections.map((section, index) => (
           <button
             key={index}
-            className={`${
-              activeSection === index
-                ? "text-green-600 underline"
-                : "text-gray-700"
-            } hover:text-green-600 transition-all`}
+            className={`relative px-4 py-2 transition-all duration-300 
+              ${
+                activeSection === index
+                  ? "text-green-700 after:absolute after:w-full after:h-1 after:bg-green-700 after:bottom-0 after:left-0"
+                  : "text-gray-700 hover:text-green-600"
+              }`}
             onClick={() => setActiveSection(index)}
           >
             {section.title}
           </button>
         ))}
       </div>
+
       {/* Content Section */}
-      <div className="mt-8 flex flex-col md:flex-row items-center gap-8">
+      <div className="mt-12 flex flex-col md:flex-row items-center gap-12 transition-all duration-500">
         <div className="md:w-1/2 text-center md:text-left">
-          <p className="text-gray-700 text-lg">
+          <p className="text-gray-800 text-lg leading-relaxed">
             {sections[activeSection].content}
           </p>
         </div>
@@ -56,7 +59,7 @@ export const Company = () => {
           <img
             src={sections[activeSection].image}
             alt={sections[activeSection].title}
-            className="w-64 h-64 md:w-80 md:h-80 object-contain"
+            className="w-64 h-64 md:w-80 md:h-80 object-contain drop-shadow-xl transition-all transform hover:scale-105"
           />
         </div>
       </div>
