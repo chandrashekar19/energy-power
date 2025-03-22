@@ -2,7 +2,7 @@ import React from "react";
 
 export const ContactUs = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-16 bg-gradient-to-b from-white to-green-300">
+    <div className="pt-24 flex flex-col md:flex-row items-center justify-center min-h-screen px-6 md:px-16 bg-gradient-to-b from-white to-green-300">
       {/* Contact Form */}
       <div className="bg-white shadow-2xl rounded-lg p-8 max-w-lg w-full">
         <h2 className="text-2xl font-bold text-green-700 text-center">
