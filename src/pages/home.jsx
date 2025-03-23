@@ -25,10 +25,10 @@ export const Home = () => {
       {/* Products Section  -skew-y-6 */}
       <div className="relative py-20 bg-white">
         {/* Diagonal Background */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-green-500 to-white transform  origin-bottom-left"></div>
+        <div className="absolute top-0 left-0 w-full h-full transform  origin-bottom-left"></div>
 
         <div className="relative z-10 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+          <h2 className="text-4xl md:text-5xl font-bold text-green-800">
             Our Products
           </h2>
 
@@ -59,17 +59,17 @@ export const Home = () => {
       </div>
 
       {/* Energy Maestro Section */}
-      <div className="py-20 bg-gradient-to-b from-green-300 to-green-500 shadow-md rounded-lg">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+      <div className="py-20 shadow-md rounded-lg">
+        <h2 className="text-4xl md:text-5xl font-bold text-green-800">
           EnergyMÆSTRO
         </h2>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 mt-8">
           <div className="lg:w-1/2 text-center lg:text-left">
-            <h3 className="text-2xl md:text-3xl font-semibold text-white">
+            <h3 className="text-2xl md:text-3xl font-semibold text-green-400">
               Our Charge Network Management Software
             </h3>
-            <p className="mt-4 text-gray-100 text-lg leading-relaxed">
-              EnergyMaestro, Schön’s innovative charge network management
+            <p className="mt-4  text-lg leading-relaxed text-green-800">
+              EnergyMaestro, Schön's innovative charge network management
               system, is the nexus of advanced EV infrastructure management and
               energy optimization. This platform, tailored for the evolving
               needs of electric vehicle support, streamlines operations, and
@@ -85,8 +85,8 @@ export const Home = () => {
       </div>
 
       {/* Industries We Service */}
-      <div className="py-20 bg-gradient-to-b from-green-500 to-green-700">
-        <h2 className="text-4xl md:text-5xl font-bold text-white">
+      <div className="py-20 shadow-2xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-green-800">
           Industries We Service
         </h2>
 
@@ -100,9 +100,9 @@ export const Home = () => {
             { src: "/parking.png", label: "Parking" },
             { src: "/munci.png", label: "Municipality" },
             { src: "/work-place.png", label: "Work Place" },
-          ].map((industry, index) => (
+          ].map((industry) => (
             <div
-              key={index}
+              key={industry.label}
               className="text-center p-4 rounded-lg bg-white shadow-md hover:shadow-lg transition-all transform hover:-translate-y-2 w-48 md:w-auto inline-block md:block"
             >
               <img
