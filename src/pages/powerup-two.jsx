@@ -2,7 +2,7 @@ import React from "react";
 
 export const PowerUp60 = () => {
   return (
-    <div className="pt-24 px-6 text-center space-y-10 bg-gradient-to-b from-green-50 to-green-200 min-h-screen">
+    <div className="pt-26 px-6 text-center space-y-10 bg-gradient-to-b from-green-50 to-green-200 min-h-screen">
       {/* Title and Subtitle */}
       <h1 className="text-4xl font-extrabold text-green-700 drop-shadow-md">
         Discover PowerUp 60

@@ -2,14 +2,14 @@ import { Link } from "react-router-dom";
 
 export const Home = () => {
   return (
-    <div className="pt-20 px-6 text-center">
+    <div className="text-center">
       {/* Hero Section */}
       <div
         className="relative w-full h-screen bg-cover bg-center flex flex-col justify-center items-center text-white"
-        style={{ backgroundImage: "url('/hero1.jpg')" }}
+        style={{ backgroundImage: "url('/hero-banner.png')" }}
       >
         <h1 className="text-5xl md:text-6xl font-bold text-green-600 drop-shadow-lg animate-fadeIn">
-          The Schön Way
+          The Schon Way
         </h1>
         <p className="mt-4 max-w-2xl text-lg md:text-xl font-medium drop-shadow-lg animate-fadeIn delay-200">
           Making Range Anxiety Charging Inconvenience a thing of the past by
@@ -22,39 +22,44 @@ export const Home = () => {
         </Link>
       </div>
 
-      {/* Products Section */}
-      <div className="py-20 bg-gradient-to-b from-green-100 to-green-300">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
-          Our Products
-        </h2>
+      {/* Products Section  -skew-y-6 */}
+      <div className="relative py-20 bg-white">
+        {/* Diagonal Background */}
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-green-500 to-white transform  origin-bottom-left"></div>
 
-        {/* Slider on Mobile */}
-        <div className="mt-8 overflow-x-scroll md:overflow-hidden whitespace-nowrap scrollbar-hide flex md:grid md:grid-cols-4 gap-6 md:gap-10 px-4">
-          {[
-            { src: "/powerup-3.png", label: "PowerUp 32" },
-            { src: "/powerup-one.png", label: "PowerUp 22" },
-            { src: "/powerup-four.png", label: "PowerUp 60" },
-            { src: "/powerup-three.png", label: "PowerUp Mobile" },
-          ].map((product, index) => (
-            <div
-              key={index}
-              className="text-center p-6 rounded-lg shadow-lg bg-white hover:shadow-2xl transition-all transform hover:-translate-y-2 w-64 md:w-auto inline-block md:block"
-            >
-              <img
-                src={product.src}
-                alt={product.label}
-                className="w-full rounded-lg object-cover"
-              />
-              <p className="mt-3 font-semibold text-lg text-gray-700">
-                {product.label}
-              </p>
-            </div>
-          ))}
+        <div className="relative z-10 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
+            Our Products
+          </h2>
+
+          {/* Slider for Mobile & Grid for Desktop */}
+          <div className="mt-12 md:grid md:grid-cols-4 gap-6 px-6 overflow-x-auto scrollbar-hide flex md:block space-x-4 md:space-x-0">
+            {[
+              { src: "/powerup-3.png", label: "PowerUp 32" },
+              { src: "/powerup-one.png", label: "PowerUp 22" },
+              { src: "/powerup-four.png", label: "PowerUp 60" },
+              { src: "/powerup-three.png", label: "PowerUp Mobile" },
+            ].map((product, index) => (
+              <div
+                key={index}
+                className="min-w-[250px] md:w-auto bg-white shadow-xl rounded-lg overflow-hidden transition-transform transform hover:scale-105"
+              >
+                <img
+                  src={product.src}
+                  alt={product.label}
+                  className="w-full h-64 object-cover"
+                />
+                <div className="bg-black text-white text-center p-3 font-semibold text-lg">
+                  {product.label}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
       {/* Energy Maestro Section */}
-      <div className="py-20 bg-gradient-to-b from-green-300 to-green-500 shadow-md rounded-lg mx-6 lg:mx-16">
+      <div className="py-20 bg-gradient-to-b from-green-300 to-green-500 shadow-md rounded-lg">
         <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
           EnergyMÆSTRO
         </h2>
@@ -93,7 +98,7 @@ export const Home = () => {
             { src: "/hospital.png", label: "Hospitality" },
             { src: "/retail.png", label: "Real Estate" },
             { src: "/parking.png", label: "Parking" },
-            { src: "/muncipalities.png", label: "Municipality" },
+            { src: "/munci.png", label: "Municipality" },
             { src: "/work-place.png", label: "Work Place" },
           ].map((industry, index) => (
             <div

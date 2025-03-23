@@ -4,7 +4,7 @@ import { features, power32, solutions } from "../constants";
 
 export const PowerUp32 = () => {
   return (
-    <div className="pt-20 px-6 text-center bg-gradient-to-b from-green-50 to-green-100 min-h-screen">
+    <div className="pt-26 px-6 text-center bg-gradient-to-b from-green-50 to-green-100 min-h-screen">
       {/* Header Section */}
       <div className="p-10 rounded-2xl shadow-2xl border border-gray-200 w-full max-w-5xl mx-auto bg-white">
         <h1 className="text-4xl font-bold text-green-700">

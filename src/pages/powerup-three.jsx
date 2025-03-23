@@ -2,7 +2,7 @@ import React from "react";
 
 export const PowerUpMobile = () => {
   return (
-    <div className="pt-24 px-6 py-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 bg-gradient-to-b from-green-50 to-white rounded-2xl shadow-lg">
+    <div className="pt-26 px-6 py-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 bg-gradient-to-b from-green-50 to-white rounded-2xl shadow-lg">
       {/* Left Side - Images */}
       <div className="flex flex-col items-center gap-6">
         <img
